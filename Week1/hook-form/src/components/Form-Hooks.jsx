@@ -25,14 +25,32 @@ return(
             <div>
                 <label>First Name: </label>
                 <input type="text" value= {firstName} onChange={(e) => setFirstname(e.target.value)}/>
+
+                {
+                    firstName.length < 3? 
+                    <p>First Name has to be more than 2 characters</p>:
+                    null
+                }
             </div>
             <div>
                 <label>Last Name:</label>
                 <input type="text" value={lastName} onChange={(e) => setLastname(e.target.value)}/>
+
+                {
+                    lastName.length < 3? 
+                    <p>First Name has to be more than 2 characters</p>:
+                    null
+                }
             </div>
             <div>
                 <label>Email: </label>
                 <input type="text" value= {email} onChange={(e) => setEmail(e.target.value)}/>
+
+                {
+                    email.length < 6?
+                    <p>The field must be at least 5 characters</p>:
+                    null
+                }
             </div>
             <div>
                 <label>Password: </label>
@@ -41,6 +59,12 @@ return(
             <div>
                 <label>Confirm Password: </label>
                 <input type="password" value= {confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
+
+                {
+                    confirmPassword !== password?
+                    <p>Passwords have to match</p>:
+                    null
+                }
             </div>
             <input type="submit" value="Create User" />
         </form>
