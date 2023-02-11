@@ -5,5 +5,5 @@ module.exports = app => {
     app.get('/api/jokes/:id', jokeController.oneJoke)
     app.put('/api/jokes/:id', jokeController.updateJoke)
     app.post('/api/jokes', jokeController.createNewJoke)
-    app.delete('/api/joke/:id', jokeController.deleteJoke)
+    app.delete('/api/jokes/:id', jokeController.deleteJoke)
 }
