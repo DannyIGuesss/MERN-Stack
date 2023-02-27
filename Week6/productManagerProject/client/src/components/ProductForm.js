@@ -19,7 +19,7 @@ const ProductForm = (props) => {
     const submitHandler = (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:8000/api/createProduct', newProduct)
+        axios.post(['http://localhost:8000/api/createProduct'], newProduct)
             .then(res => {
                 setProducts([...products, res.data])
             })

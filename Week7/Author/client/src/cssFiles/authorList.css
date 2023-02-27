@@ -1,0 +1,7 @@
+.tableBox {
+    width: 100%;
+}
+
+th {
+    border: 2px solid black;
+}
